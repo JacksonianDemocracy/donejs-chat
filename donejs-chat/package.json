@@ -1,0 +1,68 @@
+{
+  "name": "donejs-chat",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "scripts": {
+    "test": "testee src/test.html --browsers firefox --reporter Spec",
+    "start": "can-serve --port 8080",
+    "develop": "can-serve --develop --port 8080",
+    "document": "documentjs",
+    "build": "node build"
+  },
+  "main": "donejs-chat/index.stache!done-autorender",
+  "files": [
+    "src"
+  ],
+  "keywords": [],
+  "system": {
+    "main": "donejs-chat/index.stache!done-autorender",
+    "directories": {
+      "lib": "src"
+    },
+    "configDependencies": [
+      "live-reload"
+    ],
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "donejs-deploy",
+      "generator-donejs",
+      "donejs-cli"
+    ],
+    "envs": {
+    "server-production": {
+      "baseURL": "https://donejs-chat-jjackson.firebaseapp.com/"
+      }
+    }
+  },
+  "dependencies": {
+    "bit-tabs": "^0.2.0",
+    "bootstrap": "^3.3.6",
+    "can": "^2.3.16",
+    "can-connect": "^0.3.0",
+    "can-ssr": "^0.11.6",
+    "done-autorender": "^0.6.0",
+    "done-component": "^0.4.0",
+    "done-css": "~1.1.13",
+    "generator-donejs": "^0.6.8",
+    "jquery": "2.1.4",
+    "steal": "^0.14.0-pre.8",
+    "steal-socket.io": "^1.0.1"
+  },
+  "devDependencies": {
+    "documentjs": "^0.4.1",
+    "donejs-deploy": "^0.4.0",
+    "funcunit": "~3.0.0",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.14.0-pre.1",
+    "testee": "^0.2.4",
+    "donejs-cli": "^0.6.0",
+    "can-fixture": "^0.1.0"
+  }
+}
